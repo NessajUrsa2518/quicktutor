@@ -1,0 +1,741 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/favicon.ico' %}"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+
+    <title>QuickTutor - Learn Anything. Teach Anyone.</title>
+  </head>
+  <body>
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex justify-content-between">
+          <div class="d-flex align-items-center">
+            <a href="#" class="navbar-brand">
+              <img src="{% static 'images/logo.svg' %}" class="logo" />
+            </a>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Learn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Teach</a>
+              </li>
+            </ul>
+          </div>
+          <div class="account-wrapper">
+            <button type="button" class="btn btn-outline-purple">Log in</button>
+            <button type="button" class="btn btn-purple">Sign up</button>
+          </div>
+          <button class="hamburger-button" id="mobile-btn">
+            <img src="{% static 'images/burger@1x.svg' %}" />
+          </button>
+        </div>
+      </nav>
+      <div class="sidemenu">
+        <div class="sidemenu-close"></div>
+        <div class="sidemenu-content">
+          <div class="sidemenu-item">
+            <div class="account-wrapper">
+              <button type="button" class="btn btn-outline-purple">Log in</button>
+              <button type="button" class="btn btn-purple">Sign up</button>
+            </div>
+          </div>
+          <div class="sidemenu-item">
+            <div class="item-list">
+              <h3>About Us</h3>
+            </div>
+            <div class="item-list">
+              <a href="#">Careers</a>
+            </div>
+            <div class="item-list">
+              <a href="#">Contact Us</a>
+            </div>
+            <div class="item-list">
+              <a href="#">FAQ</a>
+            </div>
+            <div class="item-list">
+              <a href="#">Why QuickTutor?</a>
+            </div>
+          </div>
+          <div class="sidemenu-item">
+            <div class="item-list">
+              <h3>Community</h3>
+            </div>
+            <div class="item-list">
+              <a href="#">Blog</a>
+            </div>
+            <div class="item-list">
+              <a href="#">Community Guidelines</a>
+            </div>
+            <div class="item-list">
+              <a href="#">User Safety</a>
+            </div>
+            <div class="item-list">
+              <a href="#">Non-Discrimination Policy</a>
+            </div>
+          </div>
+          <div class="sidemenu-item">
+            <div class="item-list">
+              <h3>Legal</h3>
+            </div>
+            <div class="item-list">
+              <a href="#">Privacy Policy</a>
+            </div>
+            <div class="item-list">
+              <a href="#">Service Terms of Use</a>
+            </div>
+            <div class="item-list">
+              <a href="#">Payments Terms of Service</a>
+            </div>
+            <div class="item-list">
+              <a href="#">Independent Tutor Agreement</a>
+            </div>
+          </div>
+          <div class="sidemenu-item">
+            <div class="extra-text text-center">
+              Made with&nbsp;
+              <a href="#"><i class="fa fa-heart heart-color"></i></a>&nbsp; in
+              Michigan
+            </div>
+          </div>
+          <div class="sidemenu-item text-center side-app">
+            <a href="#"><img src="{% static 'images/Download@1x.svg' %}" /></a>
+            <a href="#"><img src="{% static 'images/google-play-badge.svg' %}" /></a>
+          </div>
+          <div class="sidemenu-item">
+            <div class="social-list">
+              <a href="#"> <img src="{% static 'images/twitter-color.svg' %}" /> </a>
+              <a href="#"> <img src="{% static 'images/linkedin-color.svg' %}" /> </a>
+              <a href="#"> <img src="{% static 'images/instagram-color.svg' %}" /> </a>
+              <a href="#"> <img src="{% static 'images/youtube-color.svg' %}" /> </a>
+              <a href="#"> <img src="{% static 'images/facebook-color.svg' %}" /> </a>
+            </div>
+          </div>
+          <div class="sidemenu-item">
+            <div class="partner-list d-flex justify-content-center">
+              <a href="#"> <img src="{% static 'images/BBB.png' %}" /> </a>
+              <a href="#"> <img src="{% static 'images/green.png' %}" /> </a>
+            </div>
+          </div>
+          <p class="copyright-text">
+            © 2022 QuickTutor, LLC. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="d-flex intro-section">
+        <div
+          class="intro-section-banner"
+          style="background-image: url({% static 'images/intro-banner.png' %})"
+        >
+          <div class="intro-item-list">
+            <a href="#"><img src="{% static 'images/Download@1x.svg' %}" /></a>
+            <a href="#"><img src="{% static 'images/google-play-badge.svg' %}" /></a>
+          </div>
+        </div>
+        <div class="intro-description">
+          <div class="intro-description-item">
+            <h2>Learn Anything</h2>
+            <a href="#">
+              <span>Learn<img src="{% static 'images/right@1x.svg' %}" /></span>
+            </a>
+          </div>
+          <div class="intro-description-item">
+            <h2>Teach Anyone</h2>
+            <a href="#">
+              <span>Teach<img src="{% static 'images/right@1x.svg' %}" /></span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="learn-section">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="learn-item">
+                <img src="{% static 'images/you-in-control.svg' %}" />
+                <h2>Learn Instantly</h2>
+                <p>
+                  Get a tutor with the tap of a button. Connect, message, and
+                  schedule sessions. Payments are simple and easy.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="learn-item">
+                <img src="{% static 'images/online-person.svg' %}" />
+                <h2>Anything, anytime</h2>
+                <p>
+                  Learn or teach anything, at anytime — in person or online with
+                  the tap of a button.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="learn-item">
+                <img src="{% static 'images/a-tutor-fit.svg' %}" />
+                <h2>Anyone can teach</h2>
+                <p>
+                  Tutors set their own prices, work on their own schedule, and
+                  are provided tools to earn more money. Anyone can tutor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content-section infinite-section">
+        <div class="title">
+          <span>Infinite Possibilities</span>
+        </div>
+        <div class="img-panel">
+          <div class="img-group-wrapper desktop-screen">
+            <div class="img-item-group">
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-1.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img
+                        src="{% static 'images/stack.svg' %}"
+                        class="community-icon"
+                      />
+                    </div>
+                    <span>The Arts</span>
+                  </div>
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-2.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img src="{% static 'images/tv.svg' %}" class="community-icon" />
+                    </div>
+                    <span>Technology</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="img-item-group">
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-3.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img src="{% static 'images/car.svg' %}" class="community-icon" />
+                    </div>
+                    <span>Auto</span>
+                  </div>
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-4.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img
+                        src="{% static 'images/remedial.svg' %}"
+                        class="community-icon"
+                      />
+                    </div>
+                    <span>Remedial</span>
+                  </div>
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-5.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img
+                        src="{% static 'images/academics.svg' %}"
+                        class="community-icon"
+                      />
+                    </div>
+                    <span>Academics</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="img-item-group">
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-6.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img
+                        src="{% static 'images/auto.png' %}"
+                        class="community-icon"
+                      />
+                    </div>
+                    <span>Trades</span>
+                  </div>
+                </a>
+              </div>
+              <a href="#">
+                <div class="move-item">
+                  <span>Learn</span>
+                  <div class="left-btn">
+                    <img src="{% static 'images/right-button.svg' %}" />
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="img-group-wrapper desktop-screen">
+            <div class="img-item-group">
+              <a href="#">
+                <div class="move-item">
+                  <span>Learn</span>
+                  <div class="right-btn">
+                    <img src="{% static 'images/right-button.svg' %}" />
+                  </div>
+                </div>
+              </a>
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-7.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img
+                        src="{% static 'images/sport.svg' %}"
+                        class="community-icon"
+                      />
+                    </div>
+                    <span>Sports & <br />Games</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="img-item-group">
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-8.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img
+                        src="{% static 'images/briefcase.svg' %}"
+                        class="community-icon"
+                      />
+                    </div>
+                    <span>Business</span>
+                  </div>
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-9.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img
+                        src="{% static 'images/compass.svg' %}"
+                        class="community-icon"
+                      />
+                    </div>
+                    <span>Outdoors</span>
+                  </div>
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-10.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img
+                        src="{% static 'images/single-message.svg' %}"
+                        class="community-icon"
+                      />
+                    </div>
+                    <span>Language</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="img-item-group">
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-11.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img
+                        src="{% static 'images/single-user.svg' %}"
+                        class="community-icon"
+                      />
+                    </div>
+                    <span>Lifestyle</span>
+                  </div>
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#">
+                  <img
+                    src="{% static 'images/image-item-12.png' %}"
+                    class="community-image"
+                  />
+                  <div class="img-item-name">
+                    <div class="community-icon-wrapper">
+                      <img
+                        src="{% static 'images/heartbeat.svg' %}"
+                        class="community-icon"
+                      />
+                    </div>
+                    <span>Health</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="mobile-screen">
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-1"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img src="{% static 'images/stack.svg' %}" class="community-icon" />
+                  </div>
+                  <span>The Arts</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-2"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img src="{% static 'images/tv.svg' %}" class="community-icon" />
+                  </div>
+                  <span>Technology</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-3"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img src="{% static 'images/car.svg' %}" class="community-icon" />
+                  </div>
+                  <span>Auto</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-4"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img
+                      src="{% static 'images/remedial.svg' %}"
+                      class="community-icon"
+                    />
+                  </div>
+                  <span>Remedial</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-5"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img
+                      src="{% static 'images/academics.svg' %}"
+                      class="community-icon"
+                    />
+                  </div>
+                  <span>Academics</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-6"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img src="{% static 'images/auto.png' %}" class="community-icon" />
+                  </div>
+                  <span>Trades</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-7"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img src="{% static 'images/sport.svg' %}" class="community-icon" />
+                  </div>
+                  <span>Sports & Games</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="move-item">
+                  <div class="move-item-text">Teach</div>
+                  <div class="move-item-icon right">
+                    <img src="{% static 'images/right@1x.svg' %}" />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="move-item">
+                  <div class="move-item-text">Learn</div>
+                  <div class="move-item-icon left">
+                    <img src="{% static 'images/right@1x.svg' %}" />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-8"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img
+                      src="{% static 'images/briefcase.svg' %}"
+                      class="community-icon"
+                    />
+                  </div>
+                  <span>Business</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-9"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img
+                      src="{% static 'images/compass.svg' %}"
+                      class="community-icon"
+                    />
+                  </div>
+                  <span>Outdoors</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-10"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img
+                      src="{% static 'images/single-message.svg' %}"
+                      class="community-icon"
+                    />
+                  </div>
+                  <span>Language</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-11"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img
+                      src="{% static 'images/single-user.svg' %}"
+                      class="community-icon"
+                    />
+                  </div>
+                  <span>Lifestyle</span>
+                </div>
+              </a>
+            </div>
+            <div class="mobile-img-item">
+              <a href="#">
+                <div class="image-back image-item-12"></div>
+                <div class="mobile-img-item-name">
+                  <div class="community-icon-wrapper">
+                    <img
+                      src="{% static 'images/heartbeat.svg' %}"
+                      class="community-icon"
+                    />
+                  </div>
+                  <span>Health</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="section-border"></div>
+      </section>
+      <section class="content-section question-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-12">
+              <div class="faq-image">
+                <img src="{% static 'images/FAQ.png' %}" />
+              </div>
+              <h3 class="title">Frequently asked questions</h3>
+              <p class="description">
+                Support is just a tap away. We can also answer any questions you
+                might have in our FAQ section.
+              </p>
+              <a href="#"
+                >Get help <img src="{% static 'images/right-purple@1x.svg' %}"
+              /></a>
+            </div>
+            <div class="col-sm-6 col-12">
+              <div class="faq-image">
+                <img src="{% static 'images/Why_QT.png' %}" />
+              </div>
+              <h3 class="title">Why QuickTutor?</h3>
+              <p class="description">
+                Turn your knowledge into dollars & become your own boss today.
+              </p>
+              <a href="#"
+                >Learn more <img src="{% static 'images/right-purple@1x.svg' %}"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="row">
+          <div class="col-md-3 d-flex flex-column">
+            <h3>About Us</h3>
+            <a href="#">Careers<img src="{% static 'images/right@1x.svg' %}" /></a>
+            <a href="#">Contact Us<img src="{% static 'images/right@1x.svg' %}" /></a>
+            <a href="#">FAQ<img src="{% static 'images/right@1x.svg' %}" /></a>
+            <a href="#"
+              >Why QuickTutor?<img src="{% static 'images/right@1x.svg' %}"
+            /></a>
+          </div>
+          <div class="col-md-3 d-flex flex-column">
+            <h3>Community</h3>
+            <a href="#">Blog<img src="{% static 'images/right@1x.svg' %}" /></a>
+            <a href="#"
+              >Community Guidelines<img src="{% static 'images/right@1x.svg' %}"
+            /></a>
+            <a href="#">User Safety<img src="{% static 'images/right@1x.svg' %}" /></a>
+            <a href="#"
+              >Non-Discrimination Policy<img src="{% static 'images/right@1x.svg' %}"
+            /></a>
+          </div>
+          <div class="col-md-3 d-flex flex-column">
+            <h3>Legal</h3>
+            <a href="#"
+              >Privacy Policy<img src="{% static 'images/right@1x.svg' %}"
+            /></a>
+            <a href="#"
+              >Service Terms of Use<img src="{% static 'images/right@1x.svg' %}"
+            /></a>
+            <a href="#"
+              >Payments Terms of Service<img src="{% static 'images/right@1x.svg' %}"
+            /></a>
+            <a href="#"
+              >Independent Tutor Agreement<img src="{% static 'images/right@1x.svg' %}"
+            /></a>
+          </div>
+          <div
+            class="col-md-3 d-flex flex-column justify-content-start made-in"
+          >
+            <span class="extra-text">
+              Made with&nbsp;
+              <a href="#"><i class="fa fa-heart heart-color"></i></a>&nbsp; in
+              Michigan
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-social">
+        <div class="row">
+          <div class="col-md-4 app-list">
+            <a href="#"> <img src="{% static 'images/Download@1x.svg' %}" /> </a>
+            <a href="#"> <img src="{% static 'images/google-play-badge.svg' %}" /> </a>
+          </div>
+          <div class="col-md-4 d-flex justify-content-center">
+            <a href="#">
+              <img src="{% static 'images/BBB.png' %}" class="bbb-img" />
+            </a>
+            <a href="#">
+              <img src="{% static 'images/green.png' %}" class="green-img" />
+            </a>
+          </div>
+          <div class="col-md-4 d-flex out-site justify-content-end">
+            <a href="#" class="social-item">
+              <img src="{% static 'images/twitter-color.svg' %}" />
+            </a>
+            <a href="#" class="social-item">
+              <img src="{% static 'images/linkedin-color.svg' %}" />
+            </a>
+            <a href="#" class="social-item">
+              <img src="{% static 'images/instagram-color.svg' %}" />
+            </a>
+            <a href="#" class="social-item">
+              <img src="{% static 'images/youtube-color.svg' %}" />
+            </a>
+            <a href="#" class="social-item">
+              <img src="{% static 'images/facebook-color.svg' %}" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright-text">© 2022 QuickTutor, LLC. All Rights Reserved.</p>
+    </footer>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
