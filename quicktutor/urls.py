@@ -25,5 +25,6 @@ urlpatterns = [
 
     url(r'^$', views.home, name='home'),
     url(r'^signup/$', accounts_views.signup, name='signup'),
+    url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
 ]

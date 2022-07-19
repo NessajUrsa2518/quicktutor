@@ -56,7 +56,7 @@
               </ul>
             </div>
             {% else %}
-              <button type="button" class="btn btn-outline-purple">Log in</button>
+              <button type="button" class="btn btn-outline-purple" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
               <button type="button" class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#signModal">Sign up</button>
             {% endif %}
           </div>
@@ -70,7 +70,7 @@
         <div class="sidemenu-content">
           <div class="sidemenu-item">
             <div class="account-wrapper">
-              <button type="button" class="btn btn-outline-purple">Log in</button>
+              <button type="button" class="btn btn-outline-purple" data-bs-toggle="modal" data-bs-target="#loginModal">>Log in</button>
               <button type="button" class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#signModal">Sign up</button>
             </div>
           </div>
@@ -764,18 +764,47 @@
           <form method="post" id="signUpForm" action={% url 'signup' %} novalidate>
             <div class="modal-body">
                 {% csrf_token %}
-                <div id="form-wrapper">
+                <div id="sign-form-wrapper">
                   {% include 'includes/form.html' with form=sign_form %}
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" id="signup_btn" class="btn btn-primary">Register</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Log in modal -->
+    <div class="modal fade" id="loginModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Log in</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <form method="post" id="logInForm" action={% url 'login' %} novalidate>
+            <div class="modal-body">
+                {% csrf_token %}
+                <div id="login-form-wrapper">
+                  {% include 'includes/form.html' with form=login_form %}
                 </div>
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer justify-content-between">
               <div class="d-flex align-items-center">
-                <span>Already have an account?</span>
-                <button class="btn btn-link">Log in</button>
+                <button class="btn btn-link">Forgot your password?</button>
               </div>
-              <button type="button" id="signup_btn" class="btn btn-primary">Register</button>
+              <button type="button" id="login_btn" class="btn btn-primary">Log in</button>
             </div>
           </form>
 

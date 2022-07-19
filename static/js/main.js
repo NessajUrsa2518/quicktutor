@@ -44,10 +44,24 @@ $(document).ready(function () {
       data: $('#signUpForm').serialize(),
       success: function (res) {
         if (res.success) window.location.href = "/";
-        else $('#form-wrapper').html(res.form);
+        else $('#sign-form-wrapper').html(res.form);
         $('#signup_btn').removeAttr('disabled');
       }
     });
-});
+  });
 
+  $('#login_btn').click(function (e) {
+    e.preventDefault();
+    $('#login_btn').attr('disabled', 'disabled');
+    $.ajax({
+      type: $('#logInForm').attr('method'),
+      url: $('#logInForm').attr('action'),
+      data: $('#logInForm').serialize(),
+      success: function (res) {
+        if (res.success) window.location.href = "/";
+        else $('#login-form-wrapper').html(res.form);
+        $('#login_btn').removeAttr('disabled');
+      }
+    });
+  });
 });
