@@ -34,4 +34,20 @@ $(document).ready(function () {
       $(".navbar-brand img").attr("src", "static/images/logo-scroll.svg");
     }
   });
+
+  $('#signup_btn').click(function (e) {
+    e.preventDefault();
+    $('#signup_btn').attr('disabled', 'disabled');
+    $.ajax({
+      type: $('#signUpForm').attr('method'),
+      url: $('#signUpForm').attr('action'),
+      data: $('#signUpForm').serialize(),
+      success: function (res) {
+        if (res.success) window.location.href = "/";
+        else $('#form-wrapper').html(res.form);
+        $('#signup_btn').removeAttr('disabled');
+      }
+    });
+});
+
 });

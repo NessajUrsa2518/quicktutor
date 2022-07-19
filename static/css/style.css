@@ -816,3 +816,15 @@ footer {
 .mobile-img-item a:hover .move-item {
   opacity: .7;
 }
+
+.modal {
+  color: #000;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.btn-link{
+  text-decoration: none;
+}
