@@ -19,7 +19,7 @@ def signup(request):
 
 def login(request):
 	if request.method == 'POST' and request.is_ajax():
-		form = AuthenticationForm(request.POST)
+		form = AuthenticationForm(None, request.POST)
 		if form.is_valid():
 			user = form.get_user()
 			auth_login(request, user)

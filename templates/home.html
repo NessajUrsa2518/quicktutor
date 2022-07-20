@@ -45,7 +45,7 @@
           <div class="account-wrapper">
             {% if user.is_authenticated %}
               <div class="dropdown">
-              <button class="btn btn-dark dropdown-toggle" type="button" id="accountMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn btn-smart dropdown-toggle" type="button" id="accountMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 {{ user.username }}
               </button>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountMenuButton">
@@ -70,8 +70,22 @@
         <div class="sidemenu-content">
           <div class="sidemenu-item">
             <div class="account-wrapper">
-              <button type="button" class="btn btn-outline-purple" data-bs-toggle="modal" data-bs-target="#loginModal">>Log in</button>
-              <button type="button" class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#signModal">Sign up</button>
+              {% if user.is_authenticated %}
+                <div class="dropdown">
+                <button class="btn btn-smart dropdown-toggle" type="button" id="accountMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ user.username }}
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountMenuButton">
+                  <a class="dropdown-item" href="#">My account</a>
+                  <a class="dropdown-item" href="#">Change password</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+                </ul>
+              </div>
+              {% else %}
+                <button type="button" class="btn btn-outline-purple" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
+                <button type="button" class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#signModal">Sign up</button>
+              {% endif %}
             </div>
           </div>
           <div class="sidemenu-item">
