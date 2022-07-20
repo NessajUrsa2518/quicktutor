@@ -825,6 +825,17 @@ footer {
   margin-bottom: 1rem;
 }
 
-.btn-link{
+.btn-link {
   text-decoration: none;
+}
+
+.btn-smart {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-smart:hover {
+  font-weight: 600;
+  color: #fff;
 }

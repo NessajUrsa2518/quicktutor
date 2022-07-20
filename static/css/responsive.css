@@ -194,6 +194,10 @@
     display: block;
   }
 
+  .sidemenu-item .btn.btn-smart {
+    padding: 0.375rem 0;
+  } 
+  
   .sidemenu {
     width: 100%;
     transition: 0s;
