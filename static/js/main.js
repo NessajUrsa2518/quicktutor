@@ -64,4 +64,25 @@ $(document).ready(function () {
       }
     });
   });
+
+  $('#reset_btn').click(function (e) {
+    e.preventDefault();
+    $('#loginModal').modal('hide');
+    $('#resetModal').modal('show');
+  });
+
+  $('#send_btn').click(function (e) {
+    e.preventDefault();
+    $('#send_btn').attr('disabled', 'disabled');
+    $.ajax({
+      type: $('#resetForm').attr('method'),
+      url: $('#resetForm').attr('action'),
+      data: $('#resetForm').serialize(),
+      success: function (res) {
+        if (res.success) window.location.href = "/";
+        else $('#reset-form-wrapper').html(res.form);
+        $('#send_btn').removeAttr('disabled');
+      }
+    });
+  });
 });

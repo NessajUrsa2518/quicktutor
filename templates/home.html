@@ -816,9 +816,41 @@
             <!-- Modal footer -->
             <div class="modal-footer justify-content-between">
               <div class="d-flex align-items-center">
-                <button class="btn btn-link">Forgot your password?</button>
+                <button id="reset_btn" class="btn btn-link">Forgot your password?</button>
               </div>
-              <button type="button" id="login_btn" class="btn btn-primary">Log in</button>
+              <button id="login_btn" class="btn btn-primary">Log in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reset password modal -->
+    <div class="modal fade" id="resetModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Reset your password</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <form method="post" id="resetForm" action={% url 'reset' %} novalidate>
+            <div class="modal-body">
+                {% csrf_token %}
+                <p>
+                  Enter your email address and we will send you a link to reset your password.
+                </p>
+                <div id="reset-form-wrapper">
+                  {% include 'includes/form.html' with form=reset_form %}
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" id="send_btn" class="btn btn-primary">Send</button>
             </div>
           </form>
 
