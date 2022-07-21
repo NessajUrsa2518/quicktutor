@@ -137,4 +137,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "nessaj.ursa@gmail.com"
-EMAIL_HOST_PASSWORD = "K(j?'_=G%VbE#3"
+EMAIL_HOST_PASSWORD = "mypassword"
