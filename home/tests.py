@@ -19,8 +19,4 @@ class HomeTests(TestCase):
 
 	def test_csrf(self):
 		self.assertContains(self.response, 'csrfmiddlewaretoken')
-	
-	def test_contains_form(self):
-		form = self.response.context.get('form')
-		self.assertIsInstance(form, SignUpForm)
 
